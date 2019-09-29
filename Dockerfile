@@ -10,4 +10,5 @@ COPY frps /usr/local/frps/frps
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh /usr/local/frps/frps
-ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]
+CMD ["./frps", "-c", "frps.ini"]
