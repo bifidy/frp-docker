@@ -50,7 +50,7 @@ bind_port = 5443
 # dashboard assets directory(only for debug mode)
 # assets_dir = ./static
 # console or real logFile path like ./frps.log
-# log_file = ${FRPS_LOG}
+log_file = ${FRPS_LOG}
 # trace, debug, info, warn, error
 # log_level = ${set_log_level}
 # log_max_days = ${set_log_max_days}
