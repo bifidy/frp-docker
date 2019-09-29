@@ -29,31 +29,31 @@ set_tcp_mux=${set_tcp_mux:-true}                               #tcp_mux = true
 bind_addr = 0.0.0.0
 bind_port = 5443
 # udp port to help make udp hole to penetrate nat
-bind_udp_port = 5444
+# bind_udp_port = 5444
 # udp port used for kcp protocol, it can be same with 'bind_port'
 # if not set, kcp is disabled in frps
-kcp_bind_port = 5443
+# kcp_bind_port = 5443
 # specify which address proxy will listen for, default value is same with bind_addr
 # proxy_bind_addr = 127.0.0.1
 # if you want to support virtual host, you must set the http port for listening (optional)
 # Note: http port and https port can be same with bind_port
-vhost_http_port = 80
-vhost_https_port = 443
+# vhost_http_port = 80
+# vhost_https_port = 443
 # set dashboard_addr and dashboard_port to view dashboard of frps
 # dashboard_addr's default value is same with bind_addr
 # dashboard is available only if dashboard_port is set
-dashboard_addr = 0.0.0.0
-dashboard_port = 5445
+# dashboard_addr = 0.0.0.0
+# dashboard_port = 5445
 # dashboard user and passwd for basic auth protect, if not set, both default value is admin
-dashboard_user = ${set_dashboard_user}
-dashboard_pwd = ${set_dashboard_pwd}
+# dashboard_user = ${set_dashboard_user}
+# dashboard_pwd = ${set_dashboard_pwd}
 # dashboard assets directory(only for debug mode)
 # assets_dir = ./static
 # console or real logFile path like ./frps.log
-log_file = ${FRPS_LOG}
+# log_file = ${FRPS_LOG}
 # trace, debug, info, warn, error
-log_level = ${set_log_level}
-log_max_days = ${set_log_max_days}
+# log_level = ${set_log_level}
+# log_max_days = ${set_log_max_days}
 # auth token
 # token = ${set_token}
 # heartbeat configure, it's not recommended to modify the default value
@@ -62,17 +62,17 @@ log_max_days = ${set_log_max_days}
 # only allow frpc to bind ports you list, if you set nothing, there won't be any limit
 #allow_ports = 2000-3000,3001,3003,4000-50000
 # pool_count in each proxy will change to max_pool_count if they exceed the maximum value
-max_pool_count = ${set_max_pool_count}
+# max_pool_count = ${set_max_pool_count}
 # max ports can be used for each client, default value is 0 means no limit
-max_ports_per_client = ${set_max_ports_per_client}
+# max_ports_per_client = ${set_max_ports_per_client}
 # authentication_timeout means the timeout interval (seconds) when the frpc connects frps
 # if authentication_timeout is zero, the time is not verified, default is 900s
-authentication_timeout = ${set_authentication_timeout}
+# authentication_timeout = ${set_authentication_timeout}
 # if subdomain_host is not empty, you can set subdomain when type is http or https in frpc's configure file
 # when subdomain is test, the host used by routing is test.frps.com
-subdomain_host = ${set_subdomain_host}
+# subdomain_host = ${set_subdomain_host}
 # if tcp stream multiplexing is used, default is true
-tcp_mux = ${set_tcp_mux}
+# tcp_mux = ${set_tcp_mux}
 EOF
 
 echo "+---------------------------------------------+"
