@@ -52,8 +52,8 @@ bind_port = 5443
 # console or real logFile path like ./frps.log
 log_file = ${FRPS_LOG}
 # trace, debug, info, warn, error
-# log_level = ${set_log_level}
-# log_max_days = ${set_log_max_days}
+log_level = ${set_log_level}
+log_max_days = ${set_log_max_days}
 # auth token
 # token = ${set_token}
 # heartbeat configure, it's not recommended to modify the default value
@@ -98,4 +98,4 @@ echo "Starting frps $(${FRPS_BIN} -v) ..."
 ${FRPS_BIN} -c ${FRPS_CONF} &
 sleep 0.3
 netstat -ntlup | grep "frps"
-exec "tail" -f ${FRPS_LOG}
+# exec "tail" -f ${FRPS_LOG}
