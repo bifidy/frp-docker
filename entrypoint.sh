@@ -98,4 +98,4 @@ echo "Starting frps $(${FRPS_BIN} -v) ..."
 ${FRPS_BIN} -c ${FRPS_CONF} &
 sleep 0.3
 netstat -ntlup | grep "frps"
-# exec "tail" -f ${FRPS_LOG}
+exec "tail" -f ${FRPS_LOG}
